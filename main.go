@@ -9,16 +9,14 @@ import (
 )
 
 func main() {
-
-
 	http.HandleFunc("/", serv.Index)
 	http.HandleFunc("/ascii-art", serv.AsciiWeb)
 	http.HandleFunc("/ascii-art/export", serv.ExportAsciiArt)
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
-	fmt.Println("Server running at http://localhost:8080")
+	fmt.Println("Server running at http://localhost:8083")
 
-	err := http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe(":8083", nil)
 	if err != nil {
 		log.Fatalf("Server failed to start: %v", err)
 	}
