@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Generator</title>
+    <link rel="stylesheet" href="/static/styles.css"> 
+</head>
+<body class="body">
+    <header>
+        <h1 class="title">ASCII Art Generator</h1>
+    </header>
+    <form action="/ascii-art/export" method="GET">
+        <input type="submit" value="Download ASCII Art as .txt">
+    </form>
+    <div class="output">
+        <pre >{{.}}</pre>
+    </div>
+</div>
+</body>
+</html>

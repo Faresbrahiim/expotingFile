@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Generator</title>
+    <link rel="stylesheet" href="/static/styles.css"> 
+</head>
+<body class="body">
+    <header>
+        <h1 class="title">ASCII Art Generator</h1>
+    </header>
+    
+    <form action="/ascii-art" method="POST">
+        <div class="input-section">
+            <label class="inputEnter" for="text">Enter text :</label><br>
+            <textarea class="textarea" id="text" maxlength="10000" name="text" placeholder="Type your text here..." required></textarea>
+        </div><br>
+
+        <div class="banner-section">
+            <label class="Selectbanner">Select a banner :</label><br>
+
+            <div class="radio-group">
+                <input class="radio1" type="radio" id="standard" name="banner" value="standard" checked>
+                <label class="standard" for="standard">Standard</label>
+            </div>
+
+            <div class="radio-group">
+                <input class="radio2" type="radio" id="shadow" name="banner" value="shadow">
+                <label class="shadow" for="shadow">Shadow</label>
+            </div>
+
+            <div class="radio-group">
+                <input class="radio3" type="radio" id="thinkertoy" name="banner" value="thinkertoy">
+                <label class="thinkertoy" for="thinkertoy">Thinkertoy</label>
+            </div>
+        </div><br>  
+        <div class="submit-section">
+            <input class="submit" type="submit" value="Generate ASCII Art">
+        </div>
+    </form>
+
+    <div class="output">
+        <pre >{{.}}</pre>
+    </div>
+<div class="footer">
+    <footer>
+
+    </footer>
+</div>
+</body>
+</html>
